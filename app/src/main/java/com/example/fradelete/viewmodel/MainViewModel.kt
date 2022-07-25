@@ -10,7 +10,7 @@ import javax.inject.Inject
 
 class MainViewModel @Inject constructor(private val productsRepository: ProductsRepository) : ViewModel(){
 
-    val product: LiveData<Result<JSONObject>>
+    val product: LiveData<List<JSONObject>>
     get() = productsRepository.products
 
     init {
